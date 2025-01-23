@@ -1,15 +1,17 @@
-
 import './App.css'
-import Header from './components/Header';
-import Main from './components/Main';
-import Footer from './components/Footer';
+import { useState } from "react"
 
 function App() {
+  const [state, setState] = useState(0)
+  
   return (
     <>
-      <Header />
-      <Main />
-      <Footer/>
+      <h1>{state}</h1>
+      <button
+        onClick={() => setState(state + 1)} // Fixed the arrow function syntax
+      >
+        + {/* Fixed the misplaced closing tag */}
+      </button>
     </>
   )
 }
